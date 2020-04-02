@@ -1,0 +1,103 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.7.5
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @_FireFart_
+_______________________________________________________________
+
+[32m[+][0m URL: http://inplainsight/wordpress/
+[32m[+][0m Started: Mon Jan  6 17:44:05 2020
+
+Interesting Finding(s):
+
+[32m[+][0m http://inplainsight/wordpress/
+ | Interesting Entry: Server: Apache/2.4.41 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m http://inplainsight/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m http://inplainsight/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m Upload directory has listing enabled: http://inplainsight/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m http://inplainsight/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 5.3.2 identified (Latest, released on 2019-12-18).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://inplainsight/wordpress/index.php/feed/, <generator>https://wordpress.org/?v=5.3.2</generator>
+ |  - http://inplainsight/wordpress/index.php/comments/feed/, <generator>https://wordpress.org/?v=5.3.2</generator>
+
+[32m[+][0m WordPress theme in use: twentytwenty
+ | Location: http://inplainsight/wordpress/wp-content/themes/twentytwenty/
+ | Last Updated: 2019-12-13T00:00:00.000Z
+ | Readme: http://inplainsight/wordpress/wp-content/themes/twentytwenty/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 1.1
+ | Style URL: http://inplainsight/wordpress/wp-content/themes/twentytwenty/style.css?ver=1.0
+ | Style Name: Twenty Twenty
+ | Style URI: https://wordpress.org/themes/twentytwenty/
+ | Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.0 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://inplainsight/wordpress/wp-content/themes/twentytwenty/style.css?ver=1.0, Match: 'Version: 1.0'
+
+
+[34m[i][0m No plugins Found.
+
+
+[34m[i][0m No themes Found.
+
+
+[34m[i][0m No Config Backups Found.
+
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m bossperson
+ | Found By: Author Posts - Author Pattern (Passive Detection)
+ | Confirmed By:
+ |  Rss Generator (Passive Detection)
+ |  Wp Json Api (Aggressive Detection)
+ |   - http://inplainsight/wordpress/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[33m[!][0m No WPVulnDB API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 50 daily requests by registering at https://wpvulndb.com/users/sign_up.
+
+[32m[+][0m Finished: Mon Jan  6 17:44:10 2020
+[32m[+][0m Requests Done: 454
+[32m[+][0m Cached Requests: 35
+[32m[+][0m Data Sent: 112.942 KB
+[32m[+][0m Data Received: 145.693 KB
+[32m[+][0m Memory used: 185.041 MB
+[32m[+][0m Elapsed time: 00:00:04

@@ -1,0 +1,5 @@
+# Nmap 7.70 scan initiated Tue Dec 25 21:16:07 2018 as: nmap -sV -Pn -vv -p21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-syst,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221 -oA reconn/10.10.10.78/scans/10.10.10.78_21_ftp 10.10.10.78
+# Ports scanned: TCP(1;21) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.78 ()	Status: Up
+Host: 10.10.10.78 ()	Ports: 21/open/tcp//ftp//vsftpd 3.0.3/
+# Nmap done at Tue Dec 25 21:16:08 2018 -- 1 IP address (1 host up) scanned in 1.58 seconds

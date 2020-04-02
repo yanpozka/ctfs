@@ -1,0 +1,67 @@
+[*] Found MSRPC service on 10.10.10.7:111
+   [*] Enumeration
+      [=] rpcclient -U "" 10.10.10.7
+   [*] Bruteforce
+      [=] rpcclient -U "" 10.10.10.7
+
+[*] Found HTTP service on 10.10.10.7:80
+   [*] Enumeration
+      [=] dirb http://10.10.10.7:80/ -o reconn/10.10.10.7/scans/10.10.10.7_80_dirb.txt
+      [=] dirbuster -H -u http://10.10.10.7:80/ -l /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -t 20 -s / -v -r reconn/10.10.10.7/scans/10.10.10.7_80_dirbuster_medium.txt
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/common.txt -u http://10.10.10.7:80/ -s '200,204,301,302,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_80_gobuster_common.txt'
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -u http://10.10.10.7:80/ -s '200,204,301,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_80_gobuster_cgis.txt'
+
+[*] Found HTTP service on 10.10.10.7:10000
+   [*] Enumeration
+      [=] dirb http://10.10.10.7:10000/ -o reconn/10.10.10.7/scans/10.10.10.7_10000_dirb.txt
+      [=] dirbuster -H -u http://10.10.10.7:10000/ -l /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -t 20 -s / -v -r reconn/10.10.10.7/scans/10.10.10.7_10000_dirbuster_medium.txt
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/common.txt -u http://10.10.10.7:10000/ -s '200,204,301,302,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_10000_gobuster_common.txt'
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -u http://10.10.10.7:10000/ -s '200,204,301,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_10000_gobuster_cgis.txt'
+
+[*] Found HTTP/S service on 10.10.10.7:80
+   [*] Enumeration
+      [=] nikto -h 10.10.10.7 -p 80 -output reconn/10.10.10.7/scans/10.10.10.7_80_nikto.txt
+      [=] curl -i 10.10.10.7:80
+      [=] w3m -dump 10.10.10.7/robots.txt | tee reconn/10.10.10.7/scans/10.10.10.7_80_robots.txt
+      [=] VHostScan -t 10.10.10.7 -oN reconn/10.10.10.7/scans/10.10.10.7_80_vhosts.txt
+
+[*] Found HTTP/S service on 10.10.10.7:10000
+   [*] Enumeration
+      [=] nikto -h 10.10.10.7 -p 10000 -output reconn/10.10.10.7/scans/10.10.10.7_10000_nikto.txt
+      [=] curl -i 10.10.10.7:10000
+      [=] w3m -dump 10.10.10.7/robots.txt | tee reconn/10.10.10.7/scans/10.10.10.7_10000_robots.txt
+      [=] VHostScan -t 10.10.10.7 -oN reconn/10.10.10.7/scans/10.10.10.7_10000_vhosts.txt
+
+[*] Found SMTP service on 10.10.10.7:25
+   [*] Find users
+      [=] smtp-user-enum -M VRFY -U /usr/share/seclists/Usernames/top_shortlist.txt -t 10.10.10.7 -p 25
+
+[*] Found HTTP service on 10.10.10.7:443
+   [*] Enumeration
+      [=] dirb http://10.10.10.7:443/ -o reconn/10.10.10.7/scans/10.10.10.7_443_dirb.txt
+      [=] dirbuster -H -u http://10.10.10.7:443/ -l /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -t 20 -s / -v -r reconn/10.10.10.7/scans/10.10.10.7_443_dirbuster_medium.txt
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/common.txt -u http://10.10.10.7:443/ -s '200,204,301,302,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_443_gobuster_common.txt'
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -u http://10.10.10.7:443/ -s '200,204,301,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_443_gobuster_cgis.txt'
+
+[*] Found HTTPS service on 10.10.10.7:443
+   [*] Enumeration
+      [=] dirb https://10.10.10.7:443/ -o reconn/10.10.10.7/scans/10.10.10.7_443_dirb.txt
+      [=] dirbuster -H -u https://10.10.10.7:443/ -l /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -t 20 -s / -v -r reconn/10.10.10.7/scans/10.10.10.7_443_dirbuster_medium.txt
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/common.txt -u https://10.10.10.7:443/ -s '200,204,301,302,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_443_gobuster_common.txt'
+      [=] gobuster -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -u https://10.10.10.7:443/ -s '200,204,301,307,403,500' -e | tee 'reconn/10.10.10.7/scans/10.10.10.7_443_gobuster_cgis.txt'
+
+[*] Found SSH service on 10.10.10.7:22
+   [*] Bruteforcing
+      [=] medusa -u root -P /usr/share/wordlists/rockyou.txt -e ns -h 10.10.10.7 - 22 -M ssh
+      [=] hydra -f -V -t 1 -l root -P /usr/share/wordlists/rockyou.txt -s 22 10.10.10.7 ssh
+      [=] ncrack -vv -p 22 --user root -P PASS_LIST 10.10.10.7
+   [*] Use nmap to automate banner grabbing and key fingerprints, e.g.
+      [=] nmap 10.10.10.7 -p 22 -sV --script=ssh-hostkey -oA 'reconn/10.10.10.7/scans/10.10.10.7_22_ssh-hostkey'
+
+[*] Found MySql service on 10.10.10.7:3306
+   [*] Check out the server for web applications with sqli vulnerabilities
+      [=] searchsploit mysql
+
+
+
+[*] Always remember to manually go over the portscan report and carefully read between the lines ;)

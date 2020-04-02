@@ -1,0 +1,60 @@
+# Nmap 7.70 scan initiated Wed Dec 26 20:23:47 2018 as: nmap -vv -Pn -sS -A -sC -p- -T 3 -script-args=unsafe=1 -n -oN /root/htb/irked/10.10.10.117/scans/10.10.10.117.nmap -oX /root/htb/irked/10.10.10.117/scans/10.10.10.117_nmap_scan_import.xml 10.10.10.117
+Nmap scan report for 10.10.10.117
+Host is up, received user-set (0.082s latency).
+Scanned at 2018-12-26 20:23:47 MST for 159s
+Not shown: 65528 closed ports
+Reason: 65528 resets
+PORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 63 OpenSSH 6.7p1 Debian 5+deb8u4 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAI+wKAAyWgx/P7Pe78y6/80XVTd6QEv6t5ZIpdzKvS8qbkChLB7LC+/HVuxLshOUtac4oHr/IF9YBytBoaAte87fxF45o3HS9MflMA4511KTeNwc5QuhdHzqXX9ne0ypBAgFKECBUJqJ23Lp2S9KuYEYLzUhSdUEYqiZlcc65NspAAAAFQDwgf5Wh8QRu3zSvOIXTk+5g0eTKQAAAIBQuTzKnX3nNfflt++gnjAJ/dIRXW/KMPTNOSo730gLxMWVeId3geXDkiNCD/zo5XgMIQAWDXS+0t0hlsH1BfrDzeEbGSgYNpXoz42RSHKtx7pYLG/hbUr4836olHrxLkjXCFuYFo9fCDs2/QsAeuhCPgEDjLXItW9ibfFqLxyP2QAAAIAE5MCdrGmT8huPIxPI+bQWeQyKQI/lH32FDZb4xJBPrrqlk9wKWOa1fU2JZM0nrOkdnCPIjLeq9+Db5WyZU2u3rdU8aWLZy8zF9mXZxuW/T3yXAV5whYa4QwqaVaiEzjcgRouex0ev/u+y5vlIf4/SfAsiFQPzYKomDiBtByS9XA==
+|   2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDGASnp9kH4PwWZHx/V3aJjxLzjpiqc2FOyppTFp7/JFKcB9otDhh5kWgSrVDVijdsK95KcsEKC/R+HJ9/P0KPdf4hDvjJXB1H3Th5/83gy/TEJTDJG16zXtyR9lPdBYg4n5hhfFWO1PxM9m41XlEuNgiSYOr+uuEeLxzJb6ccq0VMnSvBd88FGnwpEoH1JYZyyTnnbwtBrXSz1tR5ZocJXU4DmI9pzTNkGFT+Q/K6V/sdF73KmMecatgcprIENgmVSaiKh9mb+4vEfWLIe0yZ97c2EdzF5255BalP3xHFAY0jROiBnUDSDlxyWMIcSymZPuE1N6Tu8nQ/pXxKvUar
+|   256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFeZigS1PimiXXJSqDy2KTT4UEEphoLAk8/ftEXUq0ihDOFDrpgT0Y4vYgYPXboLlPBKBc0nVBmKD+6pvSwIEy8=
+|   256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6m+0iYo68rwVQDYDejkVvsvg22D8MN+bNWMUEOWrhj
+80/tcp    open  http    syn-ack ttl 63 Apache httpd 2.4.10 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.10 (Debian)
+|_http-title: Site doesn't have a title (text/html).
+111/tcp   open  rpcbind syn-ack ttl 63 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          37823/tcp  status
+|_  100024  1          44966/udp  status
+6697/tcp  open  irc     syn-ack ttl 63 UnrealIRCd
+8067/tcp  open  irc     syn-ack ttl 63 UnrealIRCd
+37823/tcp open  status  syn-ack ttl 63 1 (RPC #100024)
+65534/tcp open  irc     syn-ack ttl 63 UnrealIRCd
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=12/26%OT=22%CT=1%CU=35628%PV=Y%DS=2%DC=T%G=Y%TM=5C2446
+OS:62%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10A%TI=Z%CI=I%II=I%TS=8)OP
+OS:S(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST
+OS:11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)EC
+OS:N(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=
+OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%
+OS:F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N
+OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%C
+OS:D=S)
+
+Uptime guess: 2.492 days (since Mon Dec 24 08:37:28 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: irked.htb; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+1   81.69 ms 10.10.14.1
+2   81.96 ms 10.10.10.117
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec 26 20:26:26 2018 -- 1 IP address (1 host up) scanned in 159.89 seconds

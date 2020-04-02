@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Mar  4 16:55:29 2019 as: nmap -v -p- -T5 -oA nmap/all-tcp-ports 10.10.10.105 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -T5 -oA nmap/all-tcp-ports 10.10.10.105" start="1551743729" startstr="Mon Mar  4 16:55:29 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1551743729"/>
+<taskend task="Ping Scan" time="1551743729" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1551743729"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1551743729"/>
+<taskbegin task="SYN Stealth Scan" time="1551743729"/>
+<taskprogress task="SYN Stealth Scan" time="1551743760" percent="31.74" remaining="67" etc="1551743827"/>
+<taskprogress task="SYN Stealth Scan" time="1551743790" percent="65.37" remaining="33" etc="1551743822"/>
+<taskend task="SYN Stealth Scan" time="1551743816" extrainfo="65535 total ports"/>
+<host starttime="1551743729" endtime="1551743816"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.105" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="resets" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="81935" rttvar="501" to="83939"/>
+</host>
+<runstats><finished time="1551743816" timestr="Mon Mar  4 16:56:56 2019" elapsed="87.41" summary="Nmap done at Mon Mar  4 16:56:56 2019; 1 IP address (1 host up) scanned in 87.41 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

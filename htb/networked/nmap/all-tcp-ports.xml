@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Nov 14 17:47:27 2019 as: nmap -v -p- -oA nmap/all-tcp-ports 10.10.10.146 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -oA nmap/all-tcp-ports 10.10.10.146" start="1573778847" startstr="Thu Nov 14 17:47:27 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1573778847"/>
+<taskend task="Ping Scan" time="1573778847" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1573778847"/>
+<taskprogress task="SYN Stealth Scan" time="1573778878" percent="10.95" remaining="253" etc="1573779130"/>
+<taskprogress task="SYN Stealth Scan" time="1573778908" percent="27.10" remaining="165" etc="1573779072"/>
+<taskprogress task="SYN Stealth Scan" time="1573778938" percent="44.18" remaining="115" etc="1573779053"/>
+<taskprogress task="SYN Stealth Scan" time="1573778968" percent="61.52" remaining="76" etc="1573779044"/>
+<taskprogress task="SYN Stealth Scan" time="1573778998" percent="79.24" remaining="40" etc="1573779038"/>
+<taskend task="SYN Stealth Scan" time="1573779032" extrainfo="65535 total ports"/>
+<host starttime="1573778847" endtime="1573779032"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.146" addrtype="ipv4"/>
+<hostnames>
+<hostname name="networked.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65341"/>
+<extrareasons reason="host-prohibiteds" count="191"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="63"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="57984" rttvar="2930" to="100000"/>
+</host>
+<runstats><finished time="1573779032" timestr="Thu Nov 14 17:50:32 2019" elapsed="185.41" summary="Nmap done at Thu Nov 14 17:50:32 2019; 1 IP address (1 host up) scanned in 185.41 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

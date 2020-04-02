@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Nov 16 19:33:04 2019 as: nmap -v -p- -sV -oA nmap/all-tcp-ports 10.10.10.160 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -sV -oA nmap/all-tcp-ports 10.10.10.160" start="1573957984" startstr="Sat Nov 16 19:33:04 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1573957984"/>
+<taskend task="Ping Scan" time="1573957984" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1573957984"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1573957984"/>
+<taskbegin task="SYN Stealth Scan" time="1573957984"/>
+<taskprogress task="SYN Stealth Scan" time="1573958015" percent="39.15" remaining="49" etc="1573958063"/>
+<taskend task="SYN Stealth Scan" time="1573958071" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1573958072"/>
+<taskend task="Service scan" time="1573958086" extrainfo="4 services on 1 host"/>
+<taskbegin task="NSE" time="1573958086"/>
+<taskend task="NSE" time="1573958116"/>
+<taskbegin task="NSE" time="1573958116"/>
+<taskend task="NSE" time="1573958116"/>
+<host starttime="1573957984" endtime="1573958116"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.160" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65531">
+<extrareasons reason="resets" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service></port>
+<port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="redis" product="Redis key-value store" version="4.0.9" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="MiniServ" version="1.910" extrainfo="Webmin httpd" tunnel="ssl" method="probed" conf="10"/></port>
+</ports>
+<times srtt="63179" rttvar="421" to="100000"/>
+</host>
+<runstats><finished time="1573958116" timestr="Sat Nov 16 19:35:16 2019" elapsed="132.45" summary="Nmap done at Sat Nov 16 19:35:16 2019; 1 IP address (1 host up) scanned in 132.45 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

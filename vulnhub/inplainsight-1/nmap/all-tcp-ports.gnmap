@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Wed Dec 25 15:41:59 2019 as: nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.118
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.0.0.118 (inplainsight)	Status: Up
+Host: 10.0.0.118 (inplainsight)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///	Ignored State: closed (65532)
+# Nmap done at Wed Dec 25 15:42:28 2019 -- 1 IP address (1 host up) scanned in 29.20 seconds

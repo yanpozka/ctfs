@@ -1,0 +1,43 @@
+{
+    "dataSource": {
+        "data": [
+            {
+                "City": {
+                    "type": "string"
+                },
+                "Code": {
+                    "type": "number"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Opportunity Share of New Entrepreneurs": {
+                    "type": "string"
+                },
+                "Rate of New Entrepreneurs": {
+                    "type": "string"
+                },
+                "Startup Density": {
+                    "type": "number"
+                },
+                "States": {
+                    "type": "string"
+                },
+                "Year": {
+                    "type": "number"
+                }
+            },
+            {
+                "City": "Atlanta",
+                "Code": 12060,
+                "Name": "Atlanta-Sandy Springs-Marietta",
+                "Opportunity Share of New Entrepreneurs": "",
+                "Rate of New Entrepreneurs": "",
+                "Startup Density": 294,
+                "States": "Georgia",
+                "Year": 1977
+            }
+        ],
+        "type": "json"
+    }
+}

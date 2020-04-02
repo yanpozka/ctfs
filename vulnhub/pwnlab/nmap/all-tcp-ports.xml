@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Apr  1 17:14:49 2020 as: nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.93 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.93" start="1585782889" startstr="Wed Apr  1 17:14:49 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1585782889"/>
+<taskend task="ARP Ping Scan" time="1585782889" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1585782889"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1585782889"/>
+<taskbegin task="SYN Stealth Scan" time="1585782889"/>
+<taskend task="SYN Stealth Scan" time="1585782891" extrainfo="65535 total ports"/>
+<host starttime="1585782889" endtime="1585782891"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.93" addrtype="ipv4"/>
+<address addr="08:00:27:27:EB:6E" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65531">
+<extrareasons reason="resets" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="36398"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+</ports>
+<times srtt="101" rttvar="24" to="100000"/>
+</host>
+<runstats><finished time="1585782891" timestr="Wed Apr  1 17:14:51 2020" elapsed="2.70" summary="Nmap done at Wed Apr  1 17:14:51 2020; 1 IP address (1 host up) scanned in 2.70 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

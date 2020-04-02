@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Nov 14 17:47:27 2019 as: nmap -v -p- -oA nmap/all-tcp-ports 10.10.10.146
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.146 (networked.htb)	Status: Up
+Host: 10.10.10.146 (networked.htb)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 443/closed/tcp//https///	Ignored State: filtered (65532)
+# Nmap done at Thu Nov 14 17:50:32 2019 -- 1 IP address (1 host up) scanned in 185.41 seconds

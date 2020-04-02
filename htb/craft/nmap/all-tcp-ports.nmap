@@ -1,0 +1,11 @@
+# Nmap 7.70 scan initiated Mon Nov 11 20:07:57 2019 as: nmap -v -p- -oA nmap/all-tcp-ports 10.10.10.110
+Nmap scan report for craft.htb (10.10.10.110)
+Host is up (0.075s latency).
+Not shown: 65532 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+443/tcp  open  https
+6022/tcp open  x11
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Mon Nov 11 20:13:51 2019 -- 1 IP address (1 host up) scanned in 354.23 seconds

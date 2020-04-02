@@ -1,0 +1,9 @@
+
+ssh -i backup/home/david/.ssh/id_rsa david@traverxec
+Enter passphrase for key 'backup/home/david/.ssh/id_rsa': hunter
+
+david:nowonly4me
+david:Nowonly4me
+
+david:$1$e7NfNpNi$A6nCwOTqrNR2oDuIKirRZ/
+

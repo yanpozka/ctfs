@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Dec 23 21:48:17 2019 as: nmap -v -p- -sU -oA nmap/all-upd-ports 10.0.0.144 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -sU -oA nmap/all-upd-ports 10.0.0.144" start="1577162897" startstr="Mon Dec 23 21:48:17 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1577162897"/>
+<taskend task="ARP Ping Scan" time="1577162897" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1577162897"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1577162897"/>
+<taskbegin task="UDP Scan" time="1577162897"/>
+<taskprogress task="UDP Scan" time="1577163090" percent="0.30"/>
+<taskprogress task="UDP Scan" time="1577163120" percent="0.34"/>
+<taskprogress task="UDP Scan" time="1577163150" percent="0.38"/>
+<taskprogress task="UDP Scan" time="1577163180" percent="0.43"/>
+<taskprogress task="UDP Scan" time="1577163210" percent="0.47"/>
+<taskprogress task="UDP Scan" time="1577163240" percent="0.52"/>
+<taskprogress task="UDP Scan" time="1577163270" percent="0.56"/>
+<taskprogress task="UDP Scan" time="1577163300" percent="0.60"/>
+<taskprogress task="UDP Scan" time="1577163330" percent="0.64"/>
+<taskprogress task="UDP Scan" time="1577163360" percent="0.69"/>
+<taskprogress task="UDP Scan" time="1577163390" percent="0.73"/>
+<taskprogress task="UDP Scan" time="1577163420" percent="0.77"/>
+<taskprogress task="UDP Scan" time="1577163450" percent="0.82"/>
+<taskprogress task="UDP Scan" time="1577163480" percent="0.86"/>
+<taskprogress task="UDP Scan" time="1577163510" percent="0.91"/>
+<taskprogress task="UDP Scan" time="1577163540" percent="0.95"/>
+<taskprogress task="UDP Scan" time="1577163570" percent="0.99"/>
+<taskprogress task="UDP Scan" time="1577163600" percent="1.03" remaining="67289" etc="1577230889"/>

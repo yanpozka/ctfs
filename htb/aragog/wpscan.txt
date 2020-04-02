@@ -1,0 +1,214 @@
+_______________________________________________________________
+        __          _______   _____
+        \ \        / /  __ \ / ____|
+         \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+          \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+           \  /\  /  | |     ____) | (__| (_| | | | |
+            \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+        WordPress Security Scanner by the WPScan Team
+                       Version 3.4.1
+          Sponsored by Sucuri - https://sucuri.net
+      @_WPScan_, @ethicalhack3r, @erwan_lr, @_FireFart_
+_______________________________________________________________
+
+[32m[+][0m URL: http://aragog/dev_wiki/
+[32m[+][0m Started: Tue Dec 25 22:08:03 2018
+
+Interesting Finding(s):
+
+[32m[+][0m http://aragog/dev_wiki/
+ | Interesting Entry: Server: Apache/2.4.18 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m http://aragog/dev_wiki/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m http://aragog/dev_wiki/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m WordPress version 4.9.1 identified (Insecure, released on 2017-11-29).
+ | Detected By: Rss Generator (Passive Detection)
+ |  - http://aragog/dev_wiki/index.php/feed/, <generator>https://wordpress.org/?v=4.9.1</generator>
+ |  - http://aragog/dev_wiki/index.php/comments/feed/, <generator>https://wordpress.org/?v=4.9.1</generator>
+ |
+ | [31m[!][0m 13 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: WordPress 3.7-4.9.1 - MediaElement Cross-Site Scripting (XSS)
+ |     Fixed in: 4.9.2
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9006
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-5776
+ |      - https://github.com/WordPress/WordPress/commit/3fe9cb61ee71fcfadb5e002399296fcc1198d850
+ |      - https://wordpress.org/news/2018/01/wordpress-4-9-2-security-and-maintenance-release/
+ |      - https://core.trac.wordpress.org/ticket/42720
+ |
+ | [31m[!][0m Title: WordPress <= 4.9.4 - Application Denial of Service (DoS) (unpatched)
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9021
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6389
+ |      - https://baraktawily.blogspot.fr/2018/02/how-to-dos-29-of-world-wide-websites.html
+ |      - https://github.com/quitten/doser.py
+ |      - https://thehackernews.com/2018/02/wordpress-dos-exploit.html
+ |
+ | [31m[!][0m Title: WordPress 3.7-4.9.4 - Remove localhost Default
+ |     Fixed in: 4.9.5
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9053
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10101
+ |      - https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+ |      - https://github.com/WordPress/WordPress/commit/804363859602d4050d9a38a21f5a65d9aec18216
+ |
+ | [31m[!][0m Title: WordPress 3.7-4.9.4 - Use Safe Redirect for Login
+ |     Fixed in: 4.9.5
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9054
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10100
+ |      - https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+ |      - https://github.com/WordPress/WordPress/commit/14bc2c0a6fde0da04b47130707e01df850eedc7e
+ |
+ | [31m[!][0m Title: WordPress 3.7-4.9.4 - Escape Version in Generator Tag
+ |     Fixed in: 4.9.5
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9055
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10102
+ |      - https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+ |      - https://github.com/WordPress/WordPress/commit/31a4369366d6b8ce30045d4c838de2412c77850d
+ |
+ | [31m[!][0m Title: WordPress <= 4.9.6 - Authenticated Arbitrary File Deletion
+ |     Fixed in: 4.9.7
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9100
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12895
+ |      - https://blog.ripstech.com/2018/wordpress-file-delete-to-code-execution/
+ |      - http://blog.vulnspy.com/2018/06/27/Wordpress-4-9-6-Arbitrary-File-Delection-Vulnerbility-Exploit/
+ |      - https://github.com/WordPress/WordPress/commit/c9dce0606b0d7e6f494d4abe7b193ac046a322cd
+ |      - https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/
+ |      - https://www.wordfence.com/blog/2018/07/details-of-an-additional-file-deletion-vulnerability-patched-in-wordpress-4-9-7/
+ |
+ | [31m[!][0m Title: WordPress <= 5.0 - Authenticated File Delete
+ |     Fixed in: 5.0.1
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9169
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20147
+ |      - https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+ |
+ | [31m[!][0m Title: WordPress <= 5.0 - Authenticated Post Type Bypass
+ |     Fixed in: 5.0.1
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9170
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20152
+ |      - https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+ |      - https://blog.ripstech.com/2018/wordpress-post-type-privilege-escalation/
+ |
+ | [31m[!][0m Title: WordPress <= 5.0 - PHP Object Injection via Meta Data
+ |     Fixed in: 5.0.1
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9171
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20148
+ |      - https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+ |
+ | [31m[!][0m Title: WordPress <= 5.0 - Authenticated Cross-Site Scripting (XSS)
+ |     Fixed in: 5.0.1
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9172
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20153
+ |      - https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+ |
+ | [31m[!][0m Title: WordPress <= 5.0 - Cross-Site Scripting (XSS) that could affect plugins
+ |     Fixed in: 5.0.1
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9173
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20150
+ |      - https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+ |      - https://github.com/WordPress/WordPress/commit/fb3c6ea0618fcb9a51d4f2c1940e9efcd4a2d460
+ |
+ | [31m[!][0m Title: WordPress <= 5.0 - User Activation Screen Search Engine Indexing
+ |     Fixed in: 5.0.1
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9174
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20151
+ |      - https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+ |
+ | [31m[!][0m Title: WordPress <= 5.0 - File Upload to XSS on Apache Web Servers
+ |     Fixed in: 5.0.1
+ |     References:
+ |      - https://wpvulndb.com/vulnerabilities/9175
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20149
+ |      - https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+ |      - https://github.com/WordPress/WordPress/commit/246a70bdbfac3bd45ff71c7941deef1bb206b19a
+
+[32m[+][0m WordPress theme in use: twentyseventeen
+ | Location: http://aragog/dev_wiki/wp-content/themes/twentyseventeen/
+ | Last Updated: 2018-12-19T00:00:00.000Z
+ | Readme: http://aragog/dev_wiki/wp-content/themes/twentyseventeen/README.txt
+ | [33m[!][0m The version is out of date, the latest version is 1.9
+ | Style URL: http://aragog/dev_wiki/wp-content/themes/twentyseventeen/style.css?ver=4.9.1
+ | Style Name: Twenty Seventeen
+ | Style URI: https://wordpress.org/themes/twentyseventeen/
+ | Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a fo...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Detected By: Css Style (Passive Detection)
+ |
+ | Version: 1.4 (80% confidence)
+ | Detected By: Style (Passive Detection)
+ |  - http://aragog/dev_wiki/wp-content/themes/twentyseventeen/style.css?ver=4.9.1, Match: 'Version: 1.4'
+
+
+[34m[i][0m No plugins Found.
+
+
+[34m[i][0m Theme(s) Identified:
+
+[32m[+][0m twentyseventeen
+ | Location: http://aragog/dev_wiki/wp-content/themes/twentyseventeen/
+ | Last Updated: 2018-12-19T00:00:00.000Z
+ | Readme: http://aragog/dev_wiki/wp-content/themes/twentyseventeen/README.txt
+ | [33m[!][0m The version is out of date, the latest version is 1.9
+ | Style URL: http://aragog/dev_wiki/wp-content/themes/twentyseventeen/style.css
+ | Style Name: Twenty Seventeen
+ | Style URI: https://wordpress.org/themes/twentyseventeen/
+ | Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a fo...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Detected By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 1.4 (80% confidence)
+ | Detected By: Style (Passive Detection)
+ |  - http://aragog/dev_wiki/wp-content/themes/twentyseventeen/style.css, Match: 'Version: 1.4'
+
+
+[34m[i][0m No Timthumbs Found.
+
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m administrator
+ | Detected By: Author Posts - Author Pattern (Passive Detection)
+ | Confirmed By:
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[32m[+][0m Administrator
+ | Detected By: Rss Generator (Passive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[32m[+][0m Finished: Tue Dec 25 22:09:01 2018
+[32m[+][0m Requests Done: 3045
+[32m[+][0m Cached Requests: 15
+[32m[+][0m Data Sent: 673.43 KB
+[32m[+][0m Data Received: 2.292 MB
+[32m[+][0m Memory used: 105.605 MB
+[32m[+][0m Elapsed time: 00:00:58

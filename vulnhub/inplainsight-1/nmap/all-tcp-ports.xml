@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Dec 25 15:41:59 2019 as: nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.118 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.118" start="1577313719" startstr="Wed Dec 25 15:41:59 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1577313719"/>
+<taskend task="ARP Ping Scan" time="1577313719" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1577313719"/>
+<taskend task="SYN Stealth Scan" time="1577313748" extrainfo="65535 total ports"/>
+<host starttime="1577313719" endtime="1577313748"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.118" addrtype="ipv4"/>
+<address addr="40:E2:30:28:3F:47" addrtype="mac" vendor="AzureWave Technology"/>
+<hostnames>
+<hostname name="inplainsight" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="resets" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="16938" rttvar="687" to="100000"/>
+</host>
+<runstats><finished time="1577313748" timestr="Wed Dec 25 15:42:28 2019" elapsed="29.20" summary="Nmap done at Wed Dec 25 15:42:28 2019; 1 IP address (1 host up) scanned in 29.20 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

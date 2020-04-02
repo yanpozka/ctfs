@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Mon Dec 23 21:48:17 2019 as: nmap -v -p- -sU -oA nmap/all-upd-ports 10.0.0.144

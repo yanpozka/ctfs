@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Dec 22 11:46:30 2018 as: nmap -sC -sV -sU -oA reconn/10.10.10.16/scans/10.10.10.16-udp 10.10.10.16
+Host: 10.10.10.16 ()	Status: Up
+Host: 10.10.10.16 ()	Ports: 22/closed/udp//ssh///, 80/closed/udp//http///	Ignored State: open|filtered (998)
+# Nmap done at Sat Dec 22 13:09:44 2018 -- 1 IP address (1 host up) scanned in 4994.03 seconds

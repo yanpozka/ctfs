@@ -1,0 +1,15 @@
+# Nmap 7.70 scan initiated Sat Feb 16 12:47:16 2019 as: nmap -v -p- -T5 -o nmap/allports 10.10.10.123
+Nmap scan report for 10.10.10.123
+Host is up (0.079s latency).
+Not shown: 65528 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+53/tcp  open  domain
+80/tcp  open  http
+139/tcp open  netbios-ssn
+443/tcp open  https
+445/tcp open  microsoft-ds
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Feb 16 12:49:23 2019 -- 1 IP address (1 host up) scanned in 126.80 seconds

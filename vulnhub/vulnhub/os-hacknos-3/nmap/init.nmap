@@ -1,0 +1,21 @@
+# Nmap 7.80 scan initiated Mon Dec 23 21:28:15 2019 as: nmap -v -sV -sC -oA nmap/init 10.0.0.144
+Nmap scan report for 10.0.0.144
+Host is up (0.000097s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.0p1 Ubuntu 6build1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 ce:16:a0:18:3f:74:e9:ad:cb:a9:39:90:11:b8:8a:2e (RSA)
+|   256 9d:0e:a1:a3:1e:2c:4d:00:e8:87:d2:76:8c:be:71:9a (ECDSA)
+|_  256 63:b3:75:98:de:c1:89:d9:92:4e:49:31:29:4b:c0:ad (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: HEAD GET POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: WebSec
+MAC Address: 08:00:27:EC:23:98 (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 23 21:28:22 2019 -- 1 IP address (1 host up) scanned in 7.11 seconds

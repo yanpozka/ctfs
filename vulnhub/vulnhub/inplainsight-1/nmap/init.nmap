@@ -1,0 +1,37 @@
+# Nmap 7.80 scan initiated Wed Dec 25 14:45:51 2019 as: nmap -v -sV -sC -oA nmap/init 10.0.0.118
+Nmap scan report for 10.0.0.118
+Host is up (0.010s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.0.8 or later
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 ftp      ftp           306 Nov 22 13:42 todo.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.0.0.148
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     OpenSSH 8.0p1 Ubuntu 6build1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 39:2d:36:30:aa:ac:5d:16:01:08:2c:5f:c5:67:17:b4 (RSA)
+|   256 b0:21:a7:43:0c:92:85:70:ff:57:c6:f9:37:df:e5:a2 (ECDSA)
+|_  256 73:99:d5:82:87:8c:0a:bc:3d:1e:8d:aa:b1:69:aa:35 (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: HEAD GET POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+MAC Address: 40:E2:30:28:3F:47 (AzureWave Technology)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec 25 14:46:04 2019 -- 1 IP address (1 host up) scanned in 13.04 seconds

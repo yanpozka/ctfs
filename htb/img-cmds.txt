@@ -1,0 +1,3 @@
+binwalk
+# apt install steghide
+steghide extract -sf file.jpg

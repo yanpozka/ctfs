@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [ <!ELEMENT foo ANY >
+<!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<details>
+        <subnet_mask>255.255.255.192</subnet_mask>
+        <test></test>
+</details>

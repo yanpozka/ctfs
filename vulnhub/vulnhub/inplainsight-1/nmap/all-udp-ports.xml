@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Jan  6 17:52:16 2020 as: nmap -v -p- -sU -oA nmap/all-udp-ports 10.0.0.118 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -sU -oA nmap/all-udp-ports 10.0.0.118" start="1578358336" startstr="Mon Jan  6 17:52:16 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1578358336"/>
+<taskend task="ARP Ping Scan" time="1578358336" extrainfo="1 total hosts"/>
+<taskbegin task="UDP Scan" time="1578358336"/>
+<taskprogress task="UDP Scan" time="1578358472" percent="0.30"/>
+<taskprogress task="UDP Scan" time="1578358502" percent="0.34"/>
+<taskprogress task="UDP Scan" time="1578358532" percent="0.38"/>
+<taskprogress task="UDP Scan" time="1578358562" percent="0.42"/>
+<taskprogress task="UDP Scan" time="1578358592" percent="0.43"/>
+<taskprogress task="UDP Scan" time="1578358622" percent="0.44"/>
+<taskprogress task="UDP Scan" time="1578358652" percent="0.45"/>
+<taskprogress task="UDP Scan" time="1578358682" percent="0.46"/>
+<taskprogress task="UDP Scan" time="1578358712" percent="0.46"/>

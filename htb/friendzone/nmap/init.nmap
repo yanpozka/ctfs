@@ -1,0 +1,1 @@
+# Nmap 7.70 scan initiated Sat Feb 16 12:46:42 2019 as: nmap -v -sC -sV -oA nmap/init 10.10.10.123

@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Dec 25 20:53:32 2018 as: nmap -sC -sV -sU -oA reconn/10.10.10.78/scans/10.10.10.78-udp 10.10.10.78
+Host: 10.10.10.78 ()	Status: Up
+Host: 10.10.10.78 ()	Ports: 631/open|filtered/udp//ipp///, 5353/open|filtered/udp//zeroconf///	Ignored State: closed (998)
+# Nmap done at Tue Dec 25 21:13:22 2018 -- 1 IP address (1 host up) scanned in 1190.63 seconds

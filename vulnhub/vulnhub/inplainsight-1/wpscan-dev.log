@@ -1,0 +1,118 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.7.5
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @_FireFart_
+_______________________________________________________________
+
+[32m[+][0m URL: http://inplainsight/so-dev-wordpress/
+[32m[+][0m Started: Sat Mar 21 17:53:32 2020
+
+Interesting Finding(s):
+
+[32m[+][0m http://inplainsight/so-dev-wordpress/
+ | Interesting Entry: Server: Apache/2.4.41 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m http://inplainsight/so-dev-wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m http://inplainsight/so-dev-wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m Upload directory has listing enabled: http://inplainsight/so-dev-wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m http://inplainsight/so-dev-wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 5.3.2 identified (Latest, released on 2019-12-18).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://inplainsight/so-dev-wordpress/index.php/feed/, <generator>https://wordpress.org/?v=5.3.2</generator>
+ |  - http://inplainsight/so-dev-wordpress/index.php/comments/feed/, <generator>https://wordpress.org/?v=5.3.2</generator>
+
+[32m[+][0m WordPress theme in use: twentytwenty
+ | Location: http://inplainsight/so-dev-wordpress/wp-content/themes/twentytwenty/
+ | Last Updated: 2020-02-25T00:00:00.000Z
+ | Readme: http://inplainsight/so-dev-wordpress/wp-content/themes/twentytwenty/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 1.1
+ | Style URL: http://inplainsight/so-dev-wordpress/wp-content/themes/twentytwenty/style.css?ver=1.0
+ | Style Name: Twenty Twenty
+ | Style URI: https://wordpress.org/themes/twentytwenty/
+ | Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.0 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://inplainsight/so-dev-wordpress/wp-content/themes/twentytwenty/style.css?ver=1.0, Match: 'Version: 1.0'
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+
+[34m[i][0m No plugins Found.
+
+[32m[+][0m Enumerating Vulnerable Themes (via Passive and Aggressive Methods)
+
+ Checking Known Locations -: |=========================================================================================================================================================================|
+[32m[+][0m Checking Theme Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m No themes Found.
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |==========================================================================================================================================================================|
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m Enumerating Users (via Passive and Aggressive Methods)
+
+ Brute Forcing Author IDs -: |=========================================================================================================================================================================|
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m admin
+ | Found By: Author Posts - Author Pattern (Passive Detection)
+ | Confirmed By:
+ |  Rss Generator (Passive Detection)
+ |  Wp Json Api (Aggressive Detection)
+ |   - http://inplainsight/so-dev-wordpress/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[32m[+][0m mike
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[33m[!][0m No WPVulnDB API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 50 daily requests by registering at https://wpvulndb.com/users/sign_up.
+
+[32m[+][0m Finished: Sat Mar 21 17:53:38 2020
+[32m[+][0m Requests Done: 451
+[32m[+][0m Cached Requests: 45
+[32m[+][0m Data Sent: 118.261 KB
+[32m[+][0m Data Received: 93.134 KB
+[32m[+][0m Memory used: 193.283 MB
+[32m[+][0m Elapsed time: 00:00:05

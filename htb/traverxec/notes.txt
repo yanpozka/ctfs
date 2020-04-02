@@ -1,0 +1,22 @@
+# for root: resize windows to force journalctl to open less and then type :!/bin/bash inside less
+
+
+/var/nostromo/conf/.htpasswd                                                                        
+david:$1$e7NfNpNi$A6nCwOTqrNR2oDuIKirRZ/
+
+david@traverxec.htb
+david:x:1000:1000:david,,,:/home/david:/bin/bash
+
+# user david abrio este file:
+nano server-stats.sh
+/tmp/.server-stats.sh.swp
+
+# read this file:
+/var/nostromo/conf/nhttpd.conf
+# homedirs and homedirs_public were the solution
+/home/david/public_www/protected-file-area
+
+#
+# towards root:
+
+

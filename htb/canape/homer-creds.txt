@@ -1,0 +1,2 @@
+ssh homer@10.10.10.70 -p 65535
+0B4jyA0xtytZi7esBNGp

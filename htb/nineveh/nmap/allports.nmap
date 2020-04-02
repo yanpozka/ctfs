@@ -1,0 +1,10 @@
+# Nmap 7.70 scan initiated Sat Feb 16 13:31:07 2019 as: nmap -v -p- -T5 -oA nmap/allports 10.10.10.43
+Nmap scan report for nineveh.htb (10.10.10.43)
+Host is up (0.075s latency).
+Not shown: 65533 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Feb 16 13:32:31 2019 -- 1 IP address (1 host up) scanned in 84.33 seconds

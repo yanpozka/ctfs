@@ -1,0 +1,23 @@
+# Nmap 7.70 scan initiated Wed Dec 26 20:03:58 2018 as: nmap -sC -sV -sU -oA /root/htb/irked/10.10.10.117/scans/10.10.10.117-udp 10.10.10.117
+Nmap scan report for irked.htb (10.10.10.117)
+Host is up (0.081s latency).
+Not shown: 996 closed ports
+PORT     STATE         SERVICE   VERSION
+111/udp  open          rpcbind   2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          37823/tcp  status
+|_  100024  1          44966/udp  status
+631/udp  open|filtered ipp
+1900/udp open|filtered upnp
+5353/udp open          zeroconf?
+| dns-service-discovery: 
+|   9/tcp workstation
+|     Address=10.10.10.117 dead:beef:0:0:250:56ff:fea2:c8cc
+|   80/tcp http
+|_    Address=10.10.10.117 dead:beef:0:0:250:56ff:fea2:c8cc
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec 26 20:23:46 2018 -- 1 IP address (1 host up) scanned in 1188.64 seconds

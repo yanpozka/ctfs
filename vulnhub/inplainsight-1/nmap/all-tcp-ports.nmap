@@ -1,0 +1,12 @@
+# Nmap 7.80 scan initiated Wed Dec 25 15:41:59 2019 as: nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.118
+Nmap scan report for inplainsight (10.0.0.118)
+Host is up (0.017s latency).
+Not shown: 65532 closed ports
+PORT   STATE SERVICE
+21/tcp open  ftp
+22/tcp open  ssh
+80/tcp open  http
+MAC Address: 40:E2:30:28:3F:47 (AzureWave Technology)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Wed Dec 25 15:42:28 2019 -- 1 IP address (1 host up) scanned in 29.20 seconds

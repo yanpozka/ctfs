@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Thu Nov 14 17:23:24 2019 as: nmap -v -p- -sU -oA nmap/all-udp-ports 10.10.10.157

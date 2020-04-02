@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Mon Dec 24 18:07:36 2018 as: nmap -sC -sV -sU -oA reconn/10.10.10.7/scans/10.10.10.7-udp 10.10.10.7
+Host: 10.10.10.7 ()	Status: Up
+Host: 10.10.10.7 ()	Ports: 69/open|filtered/udp//tftp///, 111/open/udp//rpcbind//2 (RPC #100000)/, 123/open/udp//ntp//NTP v4 (secondary server)/, 5000/open|filtered/udp//upnp///, 5060/open/udp//sip?///, 10000/open/udp//webmin//(https on TCP port 10000)/	Ignored State: closed (994)
+# Nmap done at Mon Dec 24 18:27:18 2018 -- 1 IP address (1 host up) scanned in 1181.63 seconds

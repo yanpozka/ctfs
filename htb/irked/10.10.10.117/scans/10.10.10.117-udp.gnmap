@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Wed Dec 26 20:03:58 2018 as: nmap -sC -sV -sU -oA /root/htb/irked/10.10.10.117/scans/10.10.10.117-udp 10.10.10.117
+Host: 10.10.10.117 (irked.htb)	Status: Up
+Host: 10.10.10.117 (irked.htb)	Ports: 111/open/udp//rpcbind//2-4 (RPC #100000)/, 631/open|filtered/udp//ipp///, 1900/open|filtered/udp//upnp///, 5353/open/udp//zeroconf?///	Ignored State: closed (996)
+# Nmap done at Wed Dec 26 20:23:46 2018 -- 1 IP address (1 host up) scanned in 1188.64 seconds

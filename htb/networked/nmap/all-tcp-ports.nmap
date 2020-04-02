@@ -1,0 +1,11 @@
+# Nmap 7.80 scan initiated Thu Nov 14 17:47:27 2019 as: nmap -v -p- -oA nmap/all-tcp-ports 10.10.10.146
+Nmap scan report for networked.htb (10.10.10.146)
+Host is up (0.058s latency).
+Not shown: 65532 filtered ports
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+80/tcp  open   http
+443/tcp closed https
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Thu Nov 14 17:50:32 2019 -- 1 IP address (1 host up) scanned in 185.41 seconds
