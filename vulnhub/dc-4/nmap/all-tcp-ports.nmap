@@ -1,0 +1,11 @@
+# Nmap 7.80 scan initiated Sat Apr  4 11:58:28 2020 as: nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.80
+Nmap scan report for 10.0.0.80
+Host is up (0.00014s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+MAC Address: 08:00:27:F7:55:6B (Oracle VirtualBox virtual NIC)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Apr  4 11:58:31 2020 -- 1 IP address (1 host up) scanned in 2.55 seconds

