@@ -1,0 +1,72 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.7.5
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @_FireFart_
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.0.0.73/wordpress/
+[32m[+][0m Effective URL: http://10.0.0.73:2/wordpress/
+[32m[+][0m Started: Thu Apr 16 19:35:08 2020
+
+Interesting Finding(s):
+
+[32m[+][0m http://10.0.0.73/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m http://10.0.0.73/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m Upload directory has listing enabled: http://10.0.0.73/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m http://10.0.0.73/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 5.2.2 identified (Insecure, released on 2019-06-18).
+ | Found By: Style Etag (Aggressive Detection)
+ |  - http://10.0.0.73/wordpress/wp-admin/load-styles.php, Match: '5.2.2'
+ | Confirmed By: Opml Generator (Aggressive Detection)
+ |  - http://10.0.0.73/wordpress/wp-links-opml.php, Match: 'generator="WordPress/5.2.2"'
+
+[34m[i][0m The main theme could not be detected.
+
+
+[34m[i][0m No plugins Found.
+
+
+[34m[i][0m No themes Found.
+
+
+[34m[i][0m No Users Found.
+
+[33m[!][0m No WPVulnDB API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 50 daily requests by registering at https://wpvulndb.com/users/sign_up.
+
+[32m[+][0m Finished: Thu Apr 16 19:35:32 2020
+[32m[+][0m Requests Done: 20947
+[32m[+][0m Cached Requests: 37
+[32m[+][0m Data Sent: 5.09 MB
+[32m[+][0m Data Received: 2.819 MB
+[32m[+][0m Memory used: 219.482 MB
+[32m[+][0m Elapsed time: 00:00:23

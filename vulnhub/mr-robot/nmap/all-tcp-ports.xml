@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Apr 12 12:12:48 2020 as: nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.48 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.48" start="1586715168" startstr="Sun Apr 12 12:12:48 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1586715168"/>
+<taskend task="ARP Ping Scan" time="1586715168" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1586715168"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1586715168"/>
+<taskbegin task="SYN Stealth Scan" time="1586715168"/>
+<taskprogress task="SYN Stealth Scan" time="1586715199" percent="16.91" remaining="153" etc="1586715351"/>
+<taskprogress task="SYN Stealth Scan" time="1586715229" percent="40.17" remaining="91" etc="1586715320"/>
+<taskprogress task="SYN Stealth Scan" time="1586715259" percent="71.19" remaining="37" etc="1586715296"/>
+<taskend task="SYN Stealth Scan" time="1586715283" extrainfo="65535 total ports"/>
+<host starttime="1586715168" endtime="1586715283"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.48" addrtype="ipv4"/>
+<address addr="08:00:27:3E:42:2C" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="603" rttvar="323" to="100000"/>
+</host>
+<runstats><finished time="1586715283" timestr="Sun Apr 12 12:14:43 2020" elapsed="114.92" summary="Nmap done at Sun Apr 12 12:14:43 2020; 1 IP address (1 host up) scanned in 114.92 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

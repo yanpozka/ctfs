@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Apr 16 20:31:56 2020 as: nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.40 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -oA nmap/all-tcp-ports 10.0.0.40" start="1587090716" startstr="Thu Apr 16 20:31:56 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1587090716"/>
+<taskend task="ARP Ping Scan" time="1587090716" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1587090716"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1587090716"/>
+<taskbegin task="SYN Stealth Scan" time="1587090716"/>
+<taskend task="SYN Stealth Scan" time="1587090720" extrainfo="65535 total ports"/>
+<host starttime="1587090716" endtime="1587090720"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.40" addrtype="ipv4"/>
+<address addr="08:00:27:3F:A2:A8" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="resets" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="99" rttvar="18" to="100000"/>
+</host>
+<runstats><finished time="1587090720" timestr="Thu Apr 16 20:32:00 2020" elapsed="3.65" summary="Nmap done at Thu Apr 16 20:32:00 2020; 1 IP address (1 host up) scanned in 3.65 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
