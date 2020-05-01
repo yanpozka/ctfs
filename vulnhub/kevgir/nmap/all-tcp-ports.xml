@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri May  1 13:29:59 2020 as: nmap -v -p- -sC -oA nmap/all-tcp-ports 10.0.0.186 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -sC -oA nmap/all-tcp-ports 10.0.0.186" start="1588361399" startstr="Fri May  1 13:29:59 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1588361399"/>
+<taskend task="NSE" time="1588361399"/>
+<taskbegin task="NSE" time="1588361399"/>
+<taskend task="NSE" time="1588361399"/>
+<taskbegin task="ARP Ping Scan" time="1588361399"/>
+<taskend task="ARP Ping Scan" time="1588361399" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1588361399"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1588361399"/>
+<taskbegin task="SYN Stealth Scan" time="1588361399"/>
+<taskend task="SYN Stealth Scan" time="1588361401" extrainfo="65535 total ports"/>
+<taskbegin task="NSE" time="1588361401"/>
+<taskend task="NSE" time="1588361457"/>
+<taskbegin task="NSE" time="1588361457"/>
+<taskend task="NSE" time="1588361457"/>
+<host starttime="1588361399" endtime="1588361457"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.186" addrtype="ipv4"/>
+<address addr="08:00:27:FC:27:82" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65517">
+<extrareasons reason="resets" count="65517"/>
+</extraports>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" method="table" conf="3"/><script id="smtp-commands" output="SMTP: EHLO 530 Please login with USER and PASS.&#xd;&#xa;"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Kevgir VM"><elem key="title">Kevgir VM</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100003  2,3,4       2049/tcp   nfs&#xa;  100003  2,3,4       2049/tcp6  nfs&#xa;  100003  2,3,4       2049/udp   nfs&#xa;  100003  2,3,4       2049/udp6  nfs&#xa;  100005  1,2,3      33221/tcp   mountd&#xa;  100005  1,2,3      42715/tcp6  mountd&#xa;  100005  1,2,3      48937/udp6  mountd&#xa;  100005  1,2,3      60979/udp   mountd&#xa;  100021  1,3,4      47639/udp6  nlockmgr&#xa;  100021  1,3,4      57126/tcp   nlockmgr&#xa;  100021  1,3,4      57912/tcp6  nlockmgr&#xa;  100021  1,3,4      58745/udp   nlockmgr&#xa;  100024  1          36086/udp6  status&#xa;  100024  1          49955/tcp   status&#xa;  100024  1          50601/tcp6  status&#xa;  100024  1          60270/udp   status&#xa;  100227  2,3         2049/tcp   nfs_acl&#xa;  100227  2,3         2049/tcp6  nfs_acl&#xa;  100227  2,3         2049/udp   nfs_acl&#xa;  100227  2,3         2049/udp6  nfs_acl&#xa;"><table key="100024">
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">108</elem>
+<elem key="port">49955</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">108</elem>
+<elem key="port">36086</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">108</elem>
+<elem key="port">60270</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">108</elem>
+<elem key="port">50601</elem>
+</table>
+</table>
+<table key="100227">
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100005">
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">33221</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">48937</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">60979</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">42715</elem>
+</table>
+</table>
+<table key="100021">
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">57126</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">47639</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">58745</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">57912</elem>
+</table>
+</table>
+<table key="100003">
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100000">
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+<table key="local">
+<elem key="addr">/run/rpcbind.sock</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsoft-ds" product="Samba smbd" version="4.1.6-Ubuntu" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="1322"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="novation" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nfs_acl" version="2-3" extrainfo="RPC #100227" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="redis" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" method="table" conf="3"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST PUT DELETE OPTIONS&#xa;  Potentially risky methods: PUT DELETE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>PUT</elem>
+<elem>DELETE</elem>
+<elem>OPTIONS</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>PUT</elem>
+<elem>DELETE</elem>
+</table>
+</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-title" output="Apache Tomcat"><elem key="title">Apache Tomcat</elem>
+</script></port>
+<port protocol="tcp" portid="8081"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="blackice-icecap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="cslistener" method="table" conf="3"/></port>
+<port protocol="tcp" portid="33221"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="33245"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="34414"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="42277"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="42645"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="49955"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="57126"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nlockmgr" version="1-4" extrainfo="RPC #100021" method="probed" conf="10"/></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -1h00m00s, deviation: 1h43m55s, median: 0s"><elem key="stddev">6235</elem>
+<elem key="mean">-3600</elem>
+<elem key="count">3</elem>
+<elem key="median">0</elem>
+</script><script id="nbstat" output="NetBIOS name: CANYOUPWNME, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  CANYOUPWNME&lt;00&gt;      Flags: &lt;unique&gt;&lt;active&gt;&#xa;  CANYOUPWNME&lt;03&gt;      Flags: &lt;unique&gt;&lt;active&gt;&#xa;  CANYOUPWNME&lt;20&gt;      Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 4.1.6-Ubuntu)&#xa;  Computer name: canyoupwnme&#xa;  NetBIOS computer name: CANYOUPWNME\x00&#xa;  Domain name: &#xa;  FQDN: canyoupwnme&#xa;  System time: 2020-05-01T22:30:01+03:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 4.1.6-Ubuntu</elem>
+<elem key="server">CANYOUPWNME\x00</elem>
+<elem key="date">2020-05-01T22:30:01+03:00</elem>
+<elem key="fqdn">canyoupwnme</elem>
+<elem key="domain_dns"></elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-05-01T19:30:01&#xa;  start_date: N/A"><elem key="date">2020-05-01T19:30:01</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="119" rttvar="29" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1588361457"/>
+<taskend task="NSE" time="1588361457"/>
+<taskbegin task="NSE" time="1588361457"/>
+<taskend task="NSE" time="1588361457"/>
+<runstats><finished time="1588361457" timestr="Fri May  1 13:30:57 2020" elapsed="58.47" summary="Nmap done at Fri May  1 13:30:57 2020; 1 IP address (1 host up) scanned in 58.47 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
