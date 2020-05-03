@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri May  1 20:29:16 2020 as: nmap -v -p- -oA nmap/all-tcp-ports 10.10.199.158 -->
+<nmaprun scanner="nmap" args="nmap -v -p- -oA nmap/all-tcp-ports 10.10.199.158" start="1588386556" startstr="Fri May  1 20:29:16 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1588386556"/>
+<taskend task="Ping Scan" time="1588386556" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1588386556"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1588386556"/>
+<taskbegin task="SYN Stealth Scan" time="1588386556"/>
+<taskprogress task="SYN Stealth Scan" time="1588386587" percent="10.82" remaining="256" etc="1588386842"/>
+<taskprogress task="SYN Stealth Scan" time="1588386617" percent="15.92" remaining="323" etc="1588386939"/>
+<taskprogress task="SYN Stealth Scan" time="1588386647" percent="20.73" remaining="349" etc="1588386995"/>
+<taskprogress task="SYN Stealth Scan" time="1588386674" percent="24.69" remaining="360" etc="1588387034"/>
+<taskprogress task="SYN Stealth Scan" time="1588386675" percent="24.80" remaining="361" etc="1588387036"/>
